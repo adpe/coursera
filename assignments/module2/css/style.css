@@ -1,0 +1,93 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	font-family: Helvetica;
+}
+
+h1 {
+	margin: 50px 0 50px 0;
+	font-size: 1.75rem;
+	text-align: center;
+}
+
+p {
+	margin-top: 50px;
+	padding: 0 15px 0 15px;
+	text-align: justify;
+	font-size: 1.25rem;
+}
+
+article {
+	position: relative;
+  	border: 1px solid black;
+	background-color: #c2c2c2;
+	width: 80%;
+    margin:auto;
+    margin-bottom: 3rem;
+}
+
+div h1 {
+	position: absolute;
+	border-left: 1px solid black;
+	border-bottom: 1px solid black;
+	max-width: 100%;
+	width: auto;
+	padding: 5px 15px 5px 15px;
+	margin: 0;
+	right: 0px;
+	font-size: 1.75rem;
+	font-weight: bold;
+}
+
+/* Styled with complementary colors */
+div:nth-child(1) h1 {
+	background-color: #ff0000;
+	color: #00ffff;
+}
+
+div:nth-child(2) h1 {
+	background-color: #00ff00;
+	color: #ff00ff;
+}
+
+div:nth-child(3) h1 {
+	background-color: #0000ff;
+	color: #ffff00;
+}
+
+/* Simple Responsive Framework. */
+section {
+  width: 100%;
+}
+
+/********** Desktop view **********/
+@media (min-width: 992px) {
+	.col-md-4 {
+		width: 33.33%;
+    	float: left;
+  	}
+}
+
+/********** Tablets view **********/
+@media (min-width: 768px) and (max-width: 991px) {
+	.col-sm-6 {
+		width: 50%;
+		float: left;
+  	}
+  	.col-sm-12 {
+		width: 100%;
+		float: left;
+  	}
+
+  	div:nth-child(3) > article {
+  		width: 90%;
+  	}
+}
+
+/********** Mobile view **********/
+@media (max-width: 767px) {
+	.col-xs-12 {
+		width: 100%;
+		float: left;
+  	}
+}
